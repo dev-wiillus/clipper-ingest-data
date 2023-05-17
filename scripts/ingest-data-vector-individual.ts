@@ -176,10 +176,10 @@ async function useLocalFile() {
 export const run = async () => {
   try {
     // case1: used supabase data
-    // await useSupabase();
+    await useSupabase();
 
     // case2: used local data
-    await useLocalFile();
+    // await useLocalFile();
   } catch (error: any) {
     console.log('error', error);
     // TODO: db, store rollback
