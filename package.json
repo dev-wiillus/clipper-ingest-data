@@ -1,0 +1,46 @@
+{
+  "name": "gpt4-langchain-pdf-ingester",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "robin",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore \"**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write",
+    "ingest": "tsx -r dotenv/config scripts/ingest-data.ts",
+    "ingest-rss": "tsx -r dotenv/config scripts/ingest-data-rss.ts",
+    "ingest-web": "tsx -r dotenv/config scripts/ingest-data-web.ts",
+    "ingest-vector": "tsx -r dotenv/config scripts/ingest-data-vector.ts",
+    "ingest-vector-individual": "tsx -r dotenv/config scripts/ingest-data-vector-individual.ts",
+    "vector-test": "tsx -r dotenv/config scripts/test-vector.ts",
+    "test-text-split": "tsx -r dotenv/config scripts/test-text-split.ts"
+  },
+  "dependencies": {
+    "@dqbd/tiktoken": "^1.0.3",
+    "@pinecone-database/pinecone": "^0.0.10",
+    "@supabase/supabase-js": "^2.13.0",
+    "@types/node-fetch": "^2.6.3",
+    "@types/selenium-webdriver": "^4.1.13",
+    "cheerio": "1.0.0-rc.12",
+    "chromedriver": "111.0.0",
+    "dotenv": "^16.0.3",
+    "html-pdf-node": "^1.0.8",
+    "langchain": "^0.0.45",
+    "node-fetch": "^3.3.1",
+    "openai": "^3.2.1",
+    "pdfjs-dist": "^3.4.120",
+    "rss-parser": "^3.12.0",
+    "selenium-webdriver": "^4.8.2"
+  },
+  "devDependencies": {
+    "@types/chromedriver": "^81.0.1",
+    "@types/html-pdf-node": "^1.0.0",
+    "@types/node": "^18.14.6",
+    "@typescript-eslint/parser": "^5.54.0",
+    "eslint": "8.35.0",
+    "prettier": "^2.8.4",
+    "tsx": "^3.12.3",
+    "typescript": "^4.9.5"
+  }
+}
